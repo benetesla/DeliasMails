@@ -13,8 +13,6 @@ Ao clicar em uma categoria, os usuários podem visualizar detalhes sobre pratos 
 ### 3. Favoritos
 Os usuários têm a opção de marcar pratos como favoritos para acessá-los facilmente posteriormente. Essa funcionalidade é útil para salvar e organizar suas escolhas preferidas.
 
-### 4. Pesquisa
-O aplicativo oferece uma funcionalidade de pesquisa para ajudar os usuários a encontrar categorias ou pratos específicos rapidamente. A pesquisa é sensível a maiúsculas e minúsculas, proporcionando uma experiência de busca eficiente.
 
 ## Como Executar o Projeto
 
@@ -24,12 +22,12 @@ Siga estas instruções para executar o aplicativo em seu ambiente local:
 
 2. Clone este repositório para o seu ambiente local usando o seguinte comando:
    ```bash
-   git clone https://github.com/seu-nome-de-usuario/food-categories-app.git
+   git clone https://github.com/benetesla/DeliasMails.git
    ```
 
 3. Navegue até o diretório do projeto:
    ```bash
-   cd food-categories-app
+   cd DeliasMails
    ```
 
 4. Execute o aplicativo no seu emulador ou dispositivo com o seguinte comando:
