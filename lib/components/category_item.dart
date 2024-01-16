@@ -3,21 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:food/models/category.dart';
 
-import '../screen/categories_meals_screen.dart';
-
 class CategoryItem extends StatelessWidget {
-  //const CategoryItem({super.key});
   final Category category;
-  // ignore: use_key_in_widget_constructors
-  const CategoryItem(this.category);
+
+  // Remova o modificador const do construtor
+  CategoryItem(this.category);
 
   void _selectCategory(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return CategoriesMealsScreen(category);
-        },
-      ),
+    Navigator.of(context).pushNamed(
+      '/category-meals',
+      arguments: category,
     );
   }
 
@@ -33,10 +28,11 @@ class CategoryItem extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Center(
-                child: Text(
-              category.title,
-              style: Theme.of(context).textTheme.displayLarge,
-            )),
+              child: Text(
+                category.title,
+                style: Theme.of(context).textTheme.displayLarge,
+              ),
+            ),
           ),
           decoration: BoxDecoration(
             gradient: LinearGradient(
