@@ -1,17 +1,17 @@
-// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last
+// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:food/models/category.dart';
+import 'package:food/utils/app_routes.dart';
 
 class CategoryItem extends StatelessWidget {
   final Category category;
 
-  // Remova o modificador const do construtor
-  CategoryItem(this.category);
+  const CategoryItem(this.category);
 
   void _selectCategory(BuildContext context) {
     Navigator.of(context).pushNamed(
-      '/category-meals',
+      AppRoute.categoryMeals,
       arguments: category,
     );
   }
