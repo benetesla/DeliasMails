@@ -46,7 +46,7 @@ class Meal {
       case Complexity.simple:
         return 'Simples';
       case Complexity.medium:
-        return 'Médio';
+        return 'Normal';
       case Complexity.difficult:
         return 'Difícil';
       default:

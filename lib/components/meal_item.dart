@@ -1,19 +1,25 @@
-// ignore_for_file: unused_element
-
 import 'package:flutter/material.dart';
-import 'package:food/utils/app_routes.dart';
-
 import '../models/meal.dart';
+import '../utils/app_routes.dart';
 
 class MealItem extends StatelessWidget {
   final Meal meal;
-  const MealItem(this.meal, {super.key});
+
+  const MealItem(this.meal, {Key? key}) : super(key: key);
 
   void _selectMeal(BuildContext context) {
-    Navigator.of(context).pushNamed(
-      AppRoute.mealDetail,
+    Navigator.of(context)
+        .pushNamed(
+      AppRoutes.mealDetail,
       arguments: meal,
-    );
+    )
+        .then((result) {
+      if (result == null) {
+        print('Sem resultado!');
+      } else {
+        print('O nome da refeição é $result.');
+      }
+    });
   }
 
   @override
@@ -47,11 +53,11 @@ class MealItem extends StatelessWidget {
                   right: 10,
                   child: Container(
                     width: 300,
+                    color: Colors.black54,
                     padding: const EdgeInsets.symmetric(
                       vertical: 5,
                       horizontal: 20,
                     ),
-                    color: Colors.black54,
                     child: Text(
                       meal.title,
                       style: const TextStyle(
