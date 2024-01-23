@@ -51,7 +51,9 @@ class MealDetailScreen extends StatelessWidget {
                     vertical: 5,
                     horizontal: 10,
                   ),
-                  child: Text(meal.ingredients[index]),
+                  child: Text(
+                    meal.ingredients[index],
+                  ),
                 ),
               ),
             ),
